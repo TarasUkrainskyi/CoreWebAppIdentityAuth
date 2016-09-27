@@ -8,7 +8,7 @@
     <environment names="Development">
         <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
         <link rel="stylesheet" href="~/css/site.css" />
-        <link rel="stylesheet" href="~/css/request_timer.css" />
+        <link rel="stylesheet" href="~/css/processing_time.css" />  
     </environment>
     <environment names="Staging,Production">
         <link rel="stylesheet" href="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.6/css/bootstrap.min.css"
@@ -43,10 +43,13 @@
     <div class="container body-content">
         @RenderBody()
         <hr />
-        <footer>
-            <div>
+        <footer>            
+            <div class="copyright-text">
                 <p>&copy; 2016 - TemplateCoreWebAppIdentityAuth</p>
-            </div>            
+            </div>
+            <div class="elapsed-time">
+                <p>Page processed in {0} milliseconds.</p>
+            </div>
         </footer>
     </div>
 

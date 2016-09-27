@@ -77,9 +77,12 @@ namespace TemplateCoreWebAppIdentityAuth
         {
             loggerFactory.AddConsole(Configuration.GetSection("Logging"));
             loggerFactory.AddDebug();
+            
+            app.UseStaticFiles();
 
             app.UseApplicationInsightsRequestTelemetry();
-            app.UseRequestTimer();
+            app.UseProcessingTimeMiddleware();
+            app.UseAuthorizationMiddleware();
 
             if (env.IsDevelopment())
             {                
@@ -93,8 +96,6 @@ namespace TemplateCoreWebAppIdentityAuth
             }
 
             app.UseApplicationInsightsExceptionTelemetry();
-
-            app.UseStaticFiles();
 
             app.UseIdentity();
 

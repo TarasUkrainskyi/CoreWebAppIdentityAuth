@@ -6,7 +6,7 @@
     // An array of relative input file paths. Globbing patterns supported
     "inputFiles": [
       "wwwroot/css/site.css",
-      "wwwroot/css/request_timer.css"
+      "wwwroot/css/processing_time.css"
     ]
   },
   {
