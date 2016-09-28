@@ -48,7 +48,7 @@ namespace TemplateCoreWebAppIdentityAuth
             services.AddApplicationInsightsTelemetry(Configuration);
 
             services.AddDbContext<ApplicationDbContext>(options =>
-                options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));            
+                options.UseSqlServer(Configuration.GetConnectionString("TemplateCoreConnection")));            
 
             //services.AddScoped<IPasswordHasher<User>, MyPasswordHasher>();
 
