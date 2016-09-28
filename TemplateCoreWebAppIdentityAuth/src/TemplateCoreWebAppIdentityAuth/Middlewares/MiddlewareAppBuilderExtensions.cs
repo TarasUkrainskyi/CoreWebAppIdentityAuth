@@ -27,5 +27,15 @@ namespace TemplateCoreWebAppIdentityAuth.Middlewares
 
             return app.UseMiddleware<AuthorizationMiddleware>();
         }
+
+        public static IApplicationBuilder UseRequestHeaderMiddleware(this IApplicationBuilder app)
+        {
+            if (app == null)
+            {
+                throw new ArgumentNullException(nameof(app));
+            }
+
+            return app.UseMiddleware<RequestHeaderMiddleware>();
+        }
     }
 }

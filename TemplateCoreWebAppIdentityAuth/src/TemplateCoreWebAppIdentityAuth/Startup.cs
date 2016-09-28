@@ -83,6 +83,7 @@ namespace TemplateCoreWebAppIdentityAuth
             app.UseApplicationInsightsRequestTelemetry();
             app.UseProcessingTimeMiddleware();
             app.UseAuthorizationMiddleware();
+            app.UseRequestHeaderMiddleware();
 
             if (env.IsDevelopment())
             {                
